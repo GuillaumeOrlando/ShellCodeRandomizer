@@ -25,7 +25,7 @@ Ou 4212 signatures différentes pour un reverse_tcp chiffré 5x en Shikata_ga_na
 
 • sh shellcode.sh [FICHIER]
 
-Le shellcode doit impérativement être renommé "shellcode"
+Le shellcode doit impérativement être renommé "shellcode" et se trouver dans le même répertoire que le script
                  
 ### DEMO :
 
