@@ -1,4 +1,5 @@
 # ShellCode Randomizer
+
 ### INTRODUCTION :
 ShellCode Randomizer est un outil permettant de chiffrer/obfusquer un shellcode malicieux.
 Pour l'utiliser, vous devez préalablement avoir géneré un ShellCode valide ayant une synthaxe du type :
@@ -20,6 +21,6 @@ Pour l'utiliser, vous devez préalablement avoir géneré un ShellCode valide ay
        [Output] Obligatoire. Nom et chemin du fichier shellcode de sortie.
        [Output keys] Obligatoire. Nom et chemin du fichier de clés de sortie.
 
-### Exemples:
+### Exemples:
        sh shellcode.sh -f shellcode -o newShellcode -k keys
        sh shellcode.sh -f shellcode -o newShellcode -k keys -v
