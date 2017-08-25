@@ -6,27 +6,20 @@ Pour l'utiliser, vous devez préalablement avoir géneré un ShellCode valide ay
 • unsigned char buf[] = 
   "\xbf\x8c\xe1\xb0\xa3\xde\xe4\xe0\x7a"
     
-### SYNOPSIS :
+### Usage:
+       sh shellcode.sh [-f] [Input] [-o] [Output] [-k] [Output keys] [-v]
+       sh shellcode.sh [-h]
 
-Le script retourne deux fichiers : 
+### Paramètres:
+       [-h] Affiche l'aide.
+       [-f] Obligatoire. Précède le fichier shellcode à obfusquer.
+       [-o] Obligatoire. Précède le nom du fichier de sortie du shellcode.
+       [-k] Obligatoire. Précède le nom du fichier de clés de sortie.
+       [-v] Optionnel. Mode verbeux. Décrit toutes les actions en cours sur le shellcode et affiche les variables DEBUG
+       [Input] Obligatoire. Nom et chemin jusqu'au fichier shellcode à obfusquer.
+       [Output] Obligatoire. Nom et chemin du fichier shellcode de sortie.
+       [Output keys] Obligatoire. Nom et chemin du fichier de clés de sortie.
 
-• le premier [FINAL] comportant le shellcode obfusqué
-
-• le deuxième [FINALKEYS] comportant les clés de déchiffrements
-                                     
-Il est ensuite facile d'ajouter ce shellcode dans un fichier C, sans que celui-ci ne trigger les analyse par signatures des AV
-
-Les clés sont génerées aléatoirements, et vont de 1 à 9 : 
-Soit un total de 81 signatures différentes uniquement pour le code d'exemple ci-dessus !
-Ou 4212 signatures différentes pour un reverse_tcp chiffré 5x en Shikata_ga_nai
-
-
-### UTILISATION :
-
-• sh shellcode.sh [FICHIER]
-
-Le shellcode doit impérativement être renommé "shellcode" et se trouver dans le même répertoire que le script
-                 
-### DEMO :
-
-https://www.youtube.com/watch?v=AWTKRTJLFxw
+### Exemples:
+       sh shellcode.sh -f shellcode -o newShellcode -k keys
+       sh shellcode.sh -f shellcode -o newShellcode -k keys -v
