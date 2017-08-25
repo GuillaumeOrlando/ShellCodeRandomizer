@@ -6,6 +6,8 @@ Pour l'utiliser, vous devez préalablement avoir géneré un ShellCode valide ay
   
 • unsigned char buf[] = 
   "\xbf\x8c\xe1\xb0\xa3\xde\xe4\xe0\x7a"
+  
+Les clés permettant de lire le shellcode sont une suite de caractères numériques aléatoires à soustraire du shellcode géneré par le script.
     
 ### Usage:
        sh shellcode.sh [-f] [Input] [-o] [Output] [-k] [Output keys] [-v]
