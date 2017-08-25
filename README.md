@@ -26,3 +26,6 @@ Les clés permettant de lire le shellcode sont une suite de caractères numériq
 ### Exemples:
        sh shellcode.sh -f shellcode -o newShellcode -k keys
        sh shellcode.sh -f shellcode -o newShellcode -k keys -v
+
+### Démonstration :
+https://youtu.be/nkv8tUdhWLQ
