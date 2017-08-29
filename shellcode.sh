@@ -162,9 +162,11 @@ sed -e 's/x//g' output1 > output
 rm output1
 sed 's@\\@@g' output > output1
 rm output
-sed '1d' output1 > rawHexa
+sed '1d' output1 > output2
+sed ':a;N;$!ba;s/\n//g' output2 > rawHexa
 cp rawHexa rawHexaBak
 rm output1
+rm output2
 
 #Récupère longueur de la chaine rawHexa + initialisation compteur 
 lenghtRaw=$(wc -c rawHexa | cut -c -3)
